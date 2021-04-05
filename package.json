@@ -4,14 +4,8 @@
   "description": "自然醒的学习笔记",
   "main": "index.js",
   "scripts": {
-    "img": "node tools/uploadImg.js",
-    "dev": "vuepress dev src",
-    "build": "vuepress build src"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "dev": "vuepress dev",
+    "build": "vuepress build"
   },
   "lint-staged": {
     "*.md": "node tools/uploadImg.js"

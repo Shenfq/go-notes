@@ -27,5 +27,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./src/.vuepress/dist
-          cname: notes.shenfq.com
+          publish_dir: .vuepress/dist
+          cname: go.shenfq.com
