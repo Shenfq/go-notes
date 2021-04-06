@@ -14,27 +14,27 @@ module.exports = {
     // `]
   ],
   themeConfig: {
-    // navbar: false,
     search: true,
     lastUpdated: '最后更新时间',
-    sidebar: {
-      '/': [
-        {
-          title: '前言',
-          sidebarDepth: 0,
-          collapsable: false,
-          children: [
-            ''
-          ]
-        },
-        {
-          title: '基础',
-          collapsable: false,
-          children: [
-            'basic/modules'
-          ]
-        }
-      ]
-    }
+    sidebar: [
+      [
+        '', '前言'
+      ],
+      {
+        title: '基础',
+        // collapsable: false,
+        children: [
+          'basic/variable',
+          'basic/modules',
+        ]
+      },
+      {
+        title: '进阶',
+        // collapsable: false,
+        children: [
+          'advance/concurrent',
+        ]
+      }
+    ]
   }
 }
