@@ -109,7 +109,7 @@ func main() {
 - `$GOROOT` 下的 `src` 目录
 - `$GOPATH` 下的 `src` 目录
 
-## Go Vender
+## Go Vendor
 
 前面这种方式，有个很麻烦的问题，就是没有办法进行很好的版本管理，而且多个依赖分散在 `$GOPATH/src` 目录下，可能会出现很多很麻烦的问题。
 
@@ -121,17 +121,17 @@ go 在 1.5 版本的时候，引入了 vendor 机制，在每个项目目录下�
 
 ![](https://file.shenfq.com/pic/20210405150802.png)
 
-使用 `go vendor` 需要先安装 `govender` 模块。
+使用 `go vendor` 需要先安装 `govendor` 模块。
 
 ```bash
-go get govender
+go get govendor
 ```
 
 然后在项目目录运行如下命令。
 
 ```bash
 cd ~/Code/gland/go-story/src/hello
-govender init
+govendor init
 govendor add github.com/TreyBastian/colourize
 ```
 
@@ -143,12 +143,12 @@ govendor add github.com/TreyBastian/colourize
 
 ![](https://file.shenfq.com/pic/20210405151449.png)
 
-有了 `go vender` 之后，依赖项的加载顺序如下：
+有了 `go vendor` 之后，依赖项的加载顺序如下：
 
-- 项目目录下的 `vender` 目录
-- 项目目录上一级的 `vender` 目录
+- 项目目录下的 `vendor` 目录
+- 项目目录上一级的 `vendor` 目录
 - 不断向上冒泡 ……（PS. 类似于 `node_modules`）
-- `$GOPATH` 下的 `vender` 目录
+- `$GOPATH` 下的 `vendor` 目录
 - `$GOROOT` 下的 `src` 目录
 - `$GOPATH` 下的 `src` 目录
 
