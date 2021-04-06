@@ -22,7 +22,6 @@ module.exports = {
       ],
       {
         title: '基础',
-        // collapsable: false,
         children: [
           'basic/variable',
           'basic/modules',
@@ -30,7 +29,6 @@ module.exports = {
       },
       {
         title: '进阶',
-        // collapsable: false,
         children: [
           'advance/concurrent',
         ]
