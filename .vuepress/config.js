@@ -22,6 +22,7 @@ module.exports = {
       ],
       {
         title: '基础',
+        sidebarDepth: 2,
         children: [
           'basic/variable',
           'basic/modules',
@@ -30,6 +31,7 @@ module.exports = {
       },
       {
         title: '进阶',
+        sidebarDepth: 2,
         children: [
           'advance/concurrent',
         ]
