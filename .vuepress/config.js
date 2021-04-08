@@ -25,6 +25,7 @@ module.exports = {
         children: [
           'basic/variable',
           'basic/modules',
+          'basic/array'
         ]
       },
       {
