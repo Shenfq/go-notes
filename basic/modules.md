@@ -172,7 +172,7 @@ export GO15VENDOREXPERIMENT=1
 
 ```bash
 # 初始化 go modules
-go mod init [pkg-name]
+go mod init [module-name]
 ```
 
 ![](https://file.shenfq.com/pic/20210405172840.png)
@@ -196,6 +196,70 @@ go get github.com/TreyBastian/colourize
 `go.mod` 中，会写入添加的依赖，以及版本号，同时，该模块会被安装到 GOPATH 中。由于我们之前将 GOPATH 移除，这里会安装到 GOPATH 的默认值中（`~/go/`）。
 
 ![](https://file.shenfq.com/pic/20210405173923.png)
+
+### 导入与导入本地模块
+
+前面介绍导入模块的方式，通过 `go get` 下载第三方模块，然后导入的方式。如果我们当前的项目中，需要进行模块的拆分，应该怎么做呢？
+
+我们可以创建一个新的 `utils` 模块，在 `go-story` 目录下新建一个 `utils` 文件夹，然后新建 `utils.go` 文件。
+
+![](https://file.shenfq.com/pic/20210409162345.png)
+
+
+```go
+package utils // 声明包名为 utils
+
+import "fmt"
+
+func Log(msg string) {
+	fmt.Print(msg, "\n")
+}
+```
+
+然后，我们去到 `main.go` 引入该模块：
+
+```go
+package main
+
+import "go-story/utils"
+
+
+func main() {
+	utils.Log("测试第三方模块")
+}
+```
+
+我们引入模块的方式为，之前调用 `go mod init` 的时候声明的 `module-name`（` go-stroy`），然后加上模块内部声明的 `package-name`（`utils`）。
+
+这里的 `package-name` 指的是代码内的 `package utils`，不是指文件名，我们可以将 `utils.go` 重命名为 `index.go`，代码也是能正常运行的。
+
+![](https://file.shenfq.com/pic/20210409163034.png)
+
+可以看到 `utils/index.go` 中，没有显示的 `export` 之类的语法来进行方法的暴露。实际上，go 中只要是大写开头的方法就可以被外部调用。
+
+```go
+// utils/index.go
+package utils
+import "fmt"
+
+func log(msg string) {
+	fmt.Print(msg, "\n")
+}
+```
+
+```go
+// main.go
+package main
+import "go-story/utils"
+
+func main() {
+	utils.log("测试第三方模块")
+}
+```
+
+如果将方法改为小写，会调用失败。
+
+![](https://file.shenfq.com/pic/20210409163419.png)
 
 ## 总结
 
