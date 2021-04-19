@@ -42,7 +42,7 @@ module.exports = {
         title: '实战',
         sidebarDepth: 2,
         children: [
-          'project/node_modeuls',
+          'project/node_modules',
         ]
       }
     ]
