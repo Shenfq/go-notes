@@ -27,7 +27,8 @@ module.exports = {
           'basic/variable',
           'basic/modules',
           'basic/array',
-          'basic/function'
+          'basic/function',
+          'basic/struct'
         ]
       },
       {
@@ -35,6 +36,13 @@ module.exports = {
         sidebarDepth: 2,
         children: [
           'advance/concurrent',
+        ]
+      },
+      {
+        title: '实战',
+        sidebarDepth: 2,
+        children: [
+          'project/node_modeuls',
         ]
       }
     ]
