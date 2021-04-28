@@ -35,6 +35,7 @@ module.exports = {
         title: '进阶',
         sidebarDepth: 2,
         children: [
+          'advance/error',
           'advance/concurrent',
         ]
       },
