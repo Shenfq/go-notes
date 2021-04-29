@@ -107,6 +107,58 @@ p.sayHello("Jack")
 
 ![](https://file.shenfq.com/pic/20210419141849.png)
 
+### 方法的集合
+
+前面介绍过，多个成员变量可以组成一个结构体，而多个方法的集合可以组成一个接口，这是一种比较抽象的类型。接口的声明与结构体类似，只需要将 `struct` 关键字替换为 `interface` 即可。
+
+现在我们，声明了一个 `Human` 接口，其中有一个 `hello` 方法。并提供一个函数，该函数接受第一个参数类型为 `Human`，在其中调用了它的 `hello` 方法。
+
+```go
+type Human interface {
+	hello() string
+}
+
+func sayHello(h Human) {
+	fmt.Println(h.hello())
+}
+```
+
+然后，声明了两个结构体 `Student` 和 `Teacher`，这两个结构体都实现了 `hello` 方法。虽然没有明确将这两个结构体与 `Human` 接口绑定，但是这两个结构体实质上将 `Human` 接口进行了实现，这是一种非入侵式的设计。
+
+```go
+type Student struct {
+	name string
+}
+
+type Teacher struct {
+	name string
+}
+
+func (s Student) hello() string {
+	return fmt.Sprintf("Hi, I'm %s", s.name)
+}
+
+func (t Teacher) hello() string {
+	return fmt.Sprintf("Hi, I'm %s", t.name)
+}
+```
+
+接下来定义了两个变量为 `s`、`t`，这两个变量分别是 `Student` 和 `Teacher`结构体的实现。在声明阶段，可以指定这两个变量为 `Human` 的实现，因为 `Student` 和 `Teacher` 确实都实现了 `hello` 方法，满足 `Human` 的定义。
+
+```go
+var s Human = Student{"Jack"}
+var t Human = Teacher{"Frank"}
+
+sayHello(s)
+sayHello(t)
+```
+
+而我们最后调用 `sayHello` 函数，也可以正常运行。
+
+![](https://file.shenfq.com/pic/20210429115318.png)
+
+这就类似于面向对象中多态的概念，`sayHello` 函数在运行的时候，不管参数 `h` 具体有哪些成员和方法，只要知道参数 `h` 实现了 `hello` 方法就能正常运行。
+
 ### 方法中的指针
 
 有时候，我们调用方法的同时，需要修改结构体中一些成员的值，会发现原结构体的值并没有改变。
