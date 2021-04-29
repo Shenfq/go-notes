@@ -36,6 +36,7 @@ module.exports = {
         sidebarDepth: 2,
         children: [
           'advance/error',
+          'advance/reflect',
           'advance/concurrent',
         ]
       },
