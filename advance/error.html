@@ -17,7 +17,7 @@
     </script>
     <meta name="description" content=" ">
     
-    <link rel="preload" href="/assets/css/0.styles.77dfaa16.css" as="style"><link rel="preload" href="/assets/js/app.602dabea.js" as="script"><link rel="preload" href="/assets/js/2.644a76e8.js" as="script"><link rel="preload" href="/assets/js/9.de7407e7.js" as="script"><link rel="prefetch" href="/assets/js/10.b099df94.js"><link rel="prefetch" href="/assets/js/11.50788d33.js"><link rel="prefetch" href="/assets/js/12.94723d3a.js"><link rel="prefetch" href="/assets/js/13.44d6f4d4.js"><link rel="prefetch" href="/assets/js/14.1b7fd945.js"><link rel="prefetch" href="/assets/js/15.08828f9f.js"><link rel="prefetch" href="/assets/js/3.6529368c.js"><link rel="prefetch" href="/assets/js/4.e05c873c.js"><link rel="prefetch" href="/assets/js/5.76fc70b2.js"><link rel="prefetch" href="/assets/js/6.498ab014.js"><link rel="prefetch" href="/assets/js/7.11760ee6.js"><link rel="prefetch" href="/assets/js/8.94349a7b.js">
+    <link rel="preload" href="/assets/css/0.styles.77dfaa16.css" as="style"><link rel="preload" href="/assets/js/app.5bdc8025.js" as="script"><link rel="preload" href="/assets/js/2.9a822252.js" as="script"><link rel="preload" href="/assets/js/9.7c4bd076.js" as="script"><link rel="prefetch" href="/assets/js/10.8da66157.js"><link rel="prefetch" href="/assets/js/11.bd814098.js"><link rel="prefetch" href="/assets/js/12.414b18af.js"><link rel="prefetch" href="/assets/js/13.e21b8012.js"><link rel="prefetch" href="/assets/js/14.8a073efc.js"><link rel="prefetch" href="/assets/js/15.f2fabb86.js"><link rel="prefetch" href="/assets/js/3.6529368c.js"><link rel="prefetch" href="/assets/js/4.e05c873c.js"><link rel="prefetch" href="/assets/js/5.33233bc0.js"><link rel="prefetch" href="/assets/js/6.498ab014.js"><link rel="prefetch" href="/assets/js/7.11760ee6.js"><link rel="prefetch" href="/assets/js/8.94349a7b.js">
     <link rel="stylesheet" href="/assets/css/0.styles.77dfaa16.css">
   </head>
   <body>
@@ -112,7 +112,7 @@ fmt<span class="token punctuation">.</span><span class="token function">Println<
 
 result <span class="token operator">:=</span> <span class="token function">divide</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
 fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;计算结果&quot;</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span>
-</code></pre></div><p>上面的代码运行后，我们发现之前调用 <code>panic()</code> 中断的程序被恢复了，而且后面的计算结果也正常进行输出了。</p> <p><img src="https://file.shenfq.com/pic/20210428120544.png" alt=""></p> <p>这就有点类似于 <code>try-catch</code> 的逻辑了，只是 <code>recover</code> 需要放在 <code>defer</code> 关键词后的语句中，更像是 <code>catch</code> 和 <code>finally</code> 的结合。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">4/28/2021, 5:02:47 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre></div><p>上面的代码运行后，我们发现之前调用 <code>panic()</code> 中断的程序被恢复了，而且后面的计算结果也正常进行输出了。</p> <p><img src="https://file.shenfq.com/pic/20210428120544.png" alt=""></p> <p>这就有点类似于 <code>try-catch</code> 的逻辑了，只是 <code>recover</code> 需要放在 <code>defer</code> 关键词后的语句中，更像是 <code>catch</code> 和 <code>finally</code> 的结合。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">4/29/2021, 4:00:29 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/basic/struct.html" class="prev">
         结构体与方法
@@ -121,6 +121,6 @@ fmt<span class="token punctuation">.</span><span class="token function">Println<
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.602dabea.js" defer></script><script src="/assets/js/2.644a76e8.js" defer></script><script src="/assets/js/9.de7407e7.js" defer></script>
+    <script src="/assets/js/app.5bdc8025.js" defer></script><script src="/assets/js/2.9a822252.js" defer></script><script src="/assets/js/9.7c4bd076.js" defer></script>
   </body>
 </html>
