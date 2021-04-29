@@ -4,7 +4,13 @@
 
 ![](https://file.shenfq.com/pic/20210405193808.png)
 
-## 学习教程
+## 关注公众号
+
+可以关注我的公众号，每次更新都会推送到公众号中。
+
+![](https://file.shenfq.com/pic/20210429163949.jpg)
+
+## 推荐资料
 
 - [Go 语言之旅](http://tour.studygolang.com/)
 - [开始使用 Go（微软出品）](https://docs.microsoft.com/zh-cn/learn/paths/go-first-steps/)
