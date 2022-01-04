@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>模块化 | Go 语言笔记</title>
-    <meta name="generator" content="VuePress 1.8.2">
+    <meta name="generator" content="VuePress 1.9.5">
     <link rel="icon" href="/favicon.ico">
     <script>
       var _hmt = _hmt || [];
@@ -17,7 +17,7 @@
     </script>
     <meta name="description" content=" ">
     
-    <link rel="preload" href="/assets/css/0.styles.77dfaa16.css" as="style"><link rel="preload" href="/assets/js/app.be2ae441.js" as="script"><link rel="preload" href="/assets/js/2.9636180a.js" as="script"><link rel="preload" href="/assets/js/13.4046b6ff.js" as="script"><link rel="prefetch" href="/assets/js/10.698ee776.js"><link rel="prefetch" href="/assets/js/11.5b4c5324.js"><link rel="prefetch" href="/assets/js/12.a672004d.js"><link rel="prefetch" href="/assets/js/14.88664ef8.js"><link rel="prefetch" href="/assets/js/15.c85834eb.js"><link rel="prefetch" href="/assets/js/16.b95fa8c7.js"><link rel="prefetch" href="/assets/js/3.d20c8fbe.js"><link rel="prefetch" href="/assets/js/4.ba3164ba.js"><link rel="prefetch" href="/assets/js/5.75a3592b.js"><link rel="prefetch" href="/assets/js/6.0377ba0c.js"><link rel="prefetch" href="/assets/js/7.25d4ecee.js"><link rel="prefetch" href="/assets/js/8.25ab8f6b.js"><link rel="prefetch" href="/assets/js/9.1d2f4076.js">
+    <link rel="preload" href="/assets/css/0.styles.77dfaa16.css" as="style"><link rel="preload" href="/assets/js/app.ef8b57c7.js" as="script"><link rel="preload" href="/assets/js/2.9a53239a.js" as="script"><link rel="preload" href="/assets/js/13.8609412e.js" as="script"><link rel="prefetch" href="/assets/js/10.0487e245.js"><link rel="prefetch" href="/assets/js/11.927d1f0d.js"><link rel="prefetch" href="/assets/js/12.08505e9e.js"><link rel="prefetch" href="/assets/js/14.946d137d.js"><link rel="prefetch" href="/assets/js/15.740865ee.js"><link rel="prefetch" href="/assets/js/16.6f223147.js"><link rel="prefetch" href="/assets/js/3.7289fcc8.js"><link rel="prefetch" href="/assets/js/4.55092137.js"><link rel="prefetch" href="/assets/js/5.02018b5a.js"><link rel="prefetch" href="/assets/js/6.bd7b0c2a.js"><link rel="prefetch" href="/assets/js/7.3f8d6486.js"><link rel="prefetch" href="/assets/js/8.90543591.js"><link rel="prefetch" href="/assets/js/9.a41ece30.js">
     <link rel="stylesheet" href="/assets/css/0.styles.77dfaa16.css">
   </head>
   <body>
@@ -100,7 +100,7 @@ go mod init <span class="token punctuation">[</span>module-name<span class="toke
 <span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	utils<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;测试第三方模块&quot;</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>如果将方法改为小写，会调用失败。</p> <p><img src="https://file.shenfq.com/pic/20210409163419.png" alt=""></p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>之前开发 node 的过程中，也踩过很多 npm 的坑，而且社区对 npm 也有很多怨言，也出现了很多第三方的模块：<code>yarn</code>、<code>pnpm</code> 等等。</p> <p>想不到 go 的模块管理，也是一部血泪史，现在下载一些 go 的老项目还会发现一些 <code>go vendor</code> 管理方式的项目。另外，<code>go mod</code> 出现后，go 官方也在计划移除 <code>GOPATH</code>。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">6/22/2021, 1:29:45 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre></div><p>如果将方法改为小写，会调用失败。</p> <p><img src="https://file.shenfq.com/pic/20210409163419.png" alt=""></p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>之前开发 node 的过程中，也踩过很多 npm 的坑，而且社区对 npm 也有很多怨言，也出现了很多第三方的模块：<code>yarn</code>、<code>pnpm</code> 等等。</p> <p>想不到 go 的模块管理，也是一部血泪史，现在下载一些 go 的老项目还会发现一些 <code>go vendor</code> 管理方式的项目。另外，<code>go mod</code> 出现后，go 官方也在计划移除 <code>GOPATH</code>。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">1/4/2022, 7:46:25 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/basic/variable.html" class="prev">
         变量与常量
@@ -109,6 +109,6 @@ go mod init <span class="token punctuation">[</span>module-name<span class="toke
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.be2ae441.js" defer></script><script src="/assets/js/2.9636180a.js" defer></script><script src="/assets/js/13.4046b6ff.js" defer></script>
+    <script src="/assets/js/app.ef8b57c7.js" defer></script><script src="/assets/js/2.9a53239a.js" defer></script><script src="/assets/js/13.8609412e.js" defer></script>
   </body>
 </html>
