@@ -11,4 +11,5 @@
 ## 推荐资料
 
 - [Go 语言之旅](http://tour.studygolang.com/)
+- [Go 语言编程之旅](https://golang2.eddycjy.com/)
 - [开始使用 Go（微软出品）](https://docs.microsoft.com/zh-cn/learn/paths/go-first-steps/)
